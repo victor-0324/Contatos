@@ -26,7 +26,7 @@ export function Home() {
     {
       img: github,
       title: 'Github',
-      description: 'Link do meu perfil do github com meus repositorios. @victor-0324',
+      description: 'Link do meu perfil do github com meus repositorios. @__vitor__lima',
       url: 'https://github.com/victor-0324',
     },
     // {
