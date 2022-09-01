@@ -14,14 +14,20 @@ jobs:
         with: 
           node-version: '17.7.1'
 
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: ~/node_modules
+          key: cache-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install and build
         run: |
           npm install
-          npm run build 
+          npm run build -- --base=/${{ github.event.repository.name }}/
       - name: Deploy to github pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_KEY }}
           branch: gh-pages
           folder: dist  
 
