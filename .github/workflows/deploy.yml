@@ -27,10 +27,10 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:
           branch: gh-pages
-          folder: dist
+          folder: /https://github.com/victor-0324/clone-linktree
 
       - name: Publish deployed code
         uses: actions/upload-artifact@v2
         with:
           name: published
-          path: dist
+          path: /https://github.com/victor-0324/clone-linktree
