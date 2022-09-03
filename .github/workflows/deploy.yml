@@ -3,7 +3,7 @@ name: deploy
 on:
   push:
     branches:
-      - master
+      - prod/github
 
 jobs:
   deploy:
@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2.1.5
-        with: 
-          node-version: '17.7.1'
+        with:
+          node-version: '16.17.0'
 
       - name: Cache node modules
         uses: actions/cache@v2
@@ -22,18 +22,16 @@ jobs:
 
       - name: Install and build
         run: |
-          npm install
-          npm run build -- --base=/${{ github.event.repository.name }}/
+          yarn install
+          yarn run build
       - name: Deploy to github pages
-        uses: JamesIves/github-pages-deploy-action@4.1.0
+        uses: JamesIves/github-pages-deploy-action@v4.4.0
         with:
-          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN_KEY }}
           branch: gh-pages
-          folder: dist  
+          folder: dist
 
-      - name: Publish deployed code 
+      - name: Publish deployed code
         uses: actions/upload-artifact@v2
         with:
           name: published
           path: dist
-          
