@@ -13,7 +13,7 @@
         "react-scripts": "5.0.1",
         "web-vitals": "^2.1.4"
     },
-    "homepage": "https://github.com/victor-0324/clone-linktree.git",
+    "homepage": "https://github.com/victor-0324/clone-linktree",
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
