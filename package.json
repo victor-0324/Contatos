@@ -13,6 +13,10 @@
         "react-scripts": "^5.0.1",
         "web-vitals": "^2.1.4"
     },
+    "engines": {
+        "node": ">6.9.4",
+        "npm": ">4.2.0"
+    },
     "resolutions": {
         "lodash": "^4.17.5"
     },
