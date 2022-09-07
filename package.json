@@ -19,7 +19,7 @@
     "homepage": "https://victor-0324.github.io/Contatos/",
     "scripts": {
         "predeploy": "npm run build",
-        "deploy": "gh-pages -b master -d build",
+        "deploy": "gh-pages -d dist",
         "start": "react-scripts start",
         "build": "react-scripts build"
     },
