@@ -20,7 +20,7 @@
     "resolutions": {
         "lodash": "^4.17.5"
     },
-    "homepage": "https://victor-0324.github.io/Contatos/",
+    "homepage": "https://victor-0324.github.io/Contato/",
     "scripts": {
         "predeploy": "npm run build",
         "deploy": "gh-pages -d dist",
