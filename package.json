@@ -38,6 +38,9 @@
             "last 1 safari version"
         ]
     },
+    "resolutions": {
+        "react-native/**/ws": "3.3.3"
+    },
     "devDependencies": {
         "gh-pages": "^4.0.0"
     }
