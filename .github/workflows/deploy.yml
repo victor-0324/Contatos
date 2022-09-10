@@ -1,30 +1,37 @@
-name: Publish
+name: deploy
+
 on:
   push:
     branches:
       - master
+
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Set up Node
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.1.5
+        with: 
+          node-version: '17.7.1'
+
+      - name: Cache node modules
+        uses: actions/cache@v2
         with:
-          node-version: 10.x 
-      - name: Set email
-        run: git config --global user.email "${{ secrets.adminemail }}"
-      - name: Set username
-        run: git config --global user.name "${{ secrets.adminname }}"
-      - name: npm install command
-        run:  npm install
-      - name: Run build command
-        run:  npm run build
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+          path: ~/node_modules
+          key: cache-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install and build
+        run: |
+          npm install
+          npm run build -- --base=/${{ github.event.repository.name }}/
+      - name: Deploy to github pages
+        uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BASE_BRANCH: master
-          BRANCH: master # The branch the action should deploy to.
-          FOLDER: build # The folder the action should deploy.
+          branch: gh-pages
+          folder: dist  
+
+      - name: Publish deployed code 
+        uses: actions/upload-artifact@v2
+        with:
+          name: published
+          path: dist
