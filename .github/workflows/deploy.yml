@@ -23,7 +23,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist
+          folder: build
 
       - name: Publish deployed code
         uses: actions/upload-artifact@v2
