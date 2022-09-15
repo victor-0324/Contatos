@@ -11,26 +11,21 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2.1.5
-        with: 
-          node-version: '17.7.1'
-
-      - name: Cache node modules
-        uses: actions/cache@v2
         with:
-          path: ~/node_modules
-          key: cache-${{ hashFiles('**/package-lock.json') }}
+          node-version: '16.17.0'
+
 
       - name: Install and build
         run: |
-          npm install
-          npm run build 
+          yarn install
+          yarn run build
       - name: Deploy to github pages
-        uses: JamesIves/github-pages-deploy-action@4.1.0
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist  
+          folder: dist
 
-      - name: Publish deployed code 
+      - name: Publish deployed code
         uses: actions/upload-artifact@v2
         with:
           name: published
