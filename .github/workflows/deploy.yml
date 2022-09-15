@@ -23,11 +23,7 @@ jobs:
       - name: Install and build
         run: |
           npm install
-<<<<<<< HEAD
           npm run build 
-=======
-          npm run build
->>>>>>> 543e9acdbb3c7b2f7029077f267f18b6715f5e21
       - name: Deploy to github pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
