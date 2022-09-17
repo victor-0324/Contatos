@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/Contatos/static/css/main.b97ffedb.css",
-    "main.js": "/Contatos/static/js/main.3945e481.js",
-    "static/media/foto.png": "/Contatos/static/media/foto.f618abcab182f8ca0202.png",
+    "main.js": "/Contatos/static/js/main.1004b51b.js",
     "static/media/Poppins-Regular.ttf": "/Contatos/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
     "static/media/Poppins-Medium.ttf": "/Contatos/static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
     "static/media/Poppins-Bold.ttf": "/Contatos/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
+    "static/media/foto.png": "/Contatos/static/media/foto.1e08abee5762f7ceacaa.png",
     "static/media/instagram.png": "/Contatos/static/media/instagram.d7b9440adef9283378ef.png",
     "static/media/instagram.svg": "/Contatos/static/media/instagram.1ba54106a801a3a36d69bd440565ca8f.svg",
     "static/media/github.svg": "/Contatos/static/media/github.b548e13b40f50c2a368178291be2feea.svg",
     "index.html": "/Contatos/index.html",
     "main.b97ffedb.css.map": "/Contatos/static/css/main.b97ffedb.css.map",
-    "main.3945e481.js.map": "/Contatos/static/js/main.3945e481.js.map"
+    "main.1004b51b.js.map": "/Contatos/static/js/main.1004b51b.js.map"
   },
   "entrypoints": [
     "static/css/main.b97ffedb.css",
-    "static/js/main.3945e481.js"
+    "static/js/main.1004b51b.js"
   ]
 }
