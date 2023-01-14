@@ -115,7 +115,7 @@ export function Home() {
         <Form />
       </div> */}
       <div className="text-center mt-4">
-        <p>Feito por mim. &#128526;</p>
+        <p>Feito por mim &#128526;</p>
       </div>
     </>
   );
